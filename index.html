@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Rezerwacja wizyty</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+<body background ="fototapety-fryzjer-bezszwowe-tlo.jpg">
+  <!--<?php include('C:\xampp\htdocs\connect.php') ?>-->
+
+  <div class="wrapper">
+    <div class="title">
+      Zarezerwuj swoją wizytę
+    </div>
+
+    <form action="C:\xampp\htdocs\connect.php" method="post">
+      <div class="form" id= "form">
+      
+
+        <div class= "error" id= "error">
+
+        </div>
+
+        <div class="inputfield">
+          <label>IMIĘ*</label>
+          <input type="text" class="input" id="imie" name="imie">
+        </div>  
+      
+        <div class="inputfield">
+          <label>NAZWISKO*</label>
+          <input type="text" class="input" id="nazwisko" name="nazwisko">
+        </div> 
+
+        <div class="inputfield">
+          <label>PŁEĆ*</label>
+          <div class="custom_select" id="plec" name="plec">
+            <select>
+              <option value="">Wybierz</option>
+              <option name="plec" value="male">Mężczyzna</option>
+              <option name="plec" value="female">Kobieta</option>
+            </select>
+          </div>
+        </div> 
+        
+        <div class="inputfield">
+          <label>NUMER TELEFONU*</label>
+          <input type="text" class="input" id="telefon" name="telefon" pattern="\+?[0-9]{9,11}" >
+        </div>
+
+        <div class="inputfield">
+          <label>ULICA*</label>
+          <input type="text" class="input" id="ulica" name="ulica">
+        </div>
+
+        <div class="inputfield">
+          <label>NUMER DOMU*</label>
+          <input type="text" class="input" id="dom" name="dom">
+        </div>
+
+        <div class="inputfield">
+          <label>NUMER LOKALU</label>
+          <input type="text" class="input" id="lokal" name="lokal">
+        </div>
+
+        <div class="inputfield">
+          <label class="text" for="input-date">WYBIERZ DATĘ*</label>
+          <input type="date" id="data" name="data" class="input">
+        </div>
+
+        <div class="inputfield">
+          <label>WYBIERZ GODZINĘ*</label>
+          <div class="custom_select" id="godzina" name="godzina">
+
+            <select id="hours">
+              <option value="9">9:00</option>
+              <option value="10">10:00</option>
+              <option value="11">11:00</option>
+              <option value="12">12:00</option>
+              <option value="13">13:00</option>
+              <option value="14">14:00</option>
+              <option value="15">15:00</option>
+              <option value="16">16:00</option>
+            </select>
+          </div>
+        </div>
+              
+          
+        <div class="inputfield">
+          <label>AKCEPTUJĘ WARUNKI REZERWACJI*</label>
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div> 
+
+        <div class="inputfield">
+          <input type="submit" value="Rezerwuj" class="btn" id="przycisk">
+        
+        </div>
+      </div>
+    </form>
+
+  </div>
+ 
+	
+</body>
+
+  <script type="text/javascript" src="error.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="walidacja.js"></script>
+</html>
